@@ -34,8 +34,8 @@ app.get("/make", function(req,res) {
 });
 
 //view all reservations
-app.get("/view.html", function(req,res) {
-    res.sendFoile(path.join(__dirname,"view.html"))
+app.get("/view", function(req,res) {
+    res.sendFile(path.join(__dirname,"view.html"))
 });
 
 app.get("/api/reservation/:reservations", function(req, res) {
