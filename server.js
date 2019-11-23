@@ -28,12 +28,14 @@ app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname,"home.html"));
 });
 
-app.get("/reserve", function(req,res) {
-    res.sendFile(path.join(__dirname, "tables.html"))
+//input reservation
+app.get("/make", function(req,res) {
+    res.sendFile(path.join(__dirname, "make.html"))
 });
 
-app.get("/tables.html", function(req,res) {
-    res.sendFoile(path.join(__dirname,"reserve.html"))
+//view all reservations
+app.get("/view.html", function(req,res) {
+    res.sendFoile(path.join(__dirname,"view.html"))
 });
 
 app.get("/api/reservation/:reservations", function(req, res) {
